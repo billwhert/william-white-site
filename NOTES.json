@@ -1,0 +1,4 @@
+{
+  "nav": "App.tsx now has only About and Experience routes.",
+  "writing_samples": "Edit writingSamples in Home.tsx to add IRS.gov links; cards render automatically."
+}
