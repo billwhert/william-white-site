@@ -32,7 +32,7 @@ export default function Home() {
     <main className="mx-auto max-w-6xl px-6 pt-10 sm:pt-14">
       <div className="grid md:grid-cols-[auto,1fr] items-center gap-8">
         <img
-          src="/assets/personal_photo.jpg"
+          src="public/assets/personal_photo.jpg"
           alt="William White"
           className="size-40 md:size-48 rounded-full object-cover shadow-lg ring-4 ring-slate-200"
         />
