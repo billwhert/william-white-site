@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// 👇 important for Pages
+// IMPORTANT: your repo name here
 export default defineConfig({
   plugins: [react()],
   base: "/william-white-site/",
