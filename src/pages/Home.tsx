@@ -4,12 +4,12 @@ import { LinkCard, SectionTitle } from "../components/Cards";
 const codingProjects = [
   {
     title: "Investigate a Dataset — Udacity/Nanodegree",
-    href: "/projects/Investigate_a_Dataset.html",
+    href: "./projects/Investigate_a_Dataset.html",
     note: "EDA with Python (pandas, matplotlib)",
   },
   {
     title: "AB Testing Results — Udacity/Nanodegree",
-    href: "/projects/Analyze_AB_Testing_Results.html",
+    href: "./projects/Analyze_AB_Testing_Results.html",
     note: "EDA with Python (pandas, matplotlib, numpy)",
   },
 ];
@@ -29,6 +29,11 @@ const writingSamples = [
     title: "PGLD-11-0522-0008",
     href: "https://www.irs.gov/pub/foia/ig/spder/pgld-11-0522-0008.pdf",
     note: "IRS.gov — Policy Guidance",
+  },
+  {
+    title: "E-Books: The Benefits of Modernization Presentation",
+    href: "./writing-samples/E-Books_Presentation.pptx",
+    note: "Example presentation highlighting visualization and storytelling techniques",
   },
 ];
 
