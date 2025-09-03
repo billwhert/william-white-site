@@ -7,6 +7,11 @@ const codingProjects = [
     href: "/projects/Investigate_a_Dataset.html",
     note: "EDA with Python (pandas, matplotlib)",
   },
+  {
+    title: "AB Testing Results — Udacity/Nanodegree",
+    href: "/projects/Analyze_AB_Testing_Results.html",
+    note: "EDA with Python (pandas, matplotlib, numpy)",
+  },
 ];
 
 const writingSamples = [
