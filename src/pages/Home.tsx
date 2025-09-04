@@ -12,6 +12,11 @@ const codingProjects = [
     href: "./projects/Analyze_AB_Testing_Results.html",
     note: "EDA with Python (pandas, matplotlib, numpy)",
   },
+  {
+    title: "Book Popularity vs Ratings Review - Personal Project",
+    href: "./projects/Book_Library_Reviews.html",
+    note: "EDA with Python (pandas, matplotlib, numpy)",
+  },
 ];
 
 const writingSamples = [
