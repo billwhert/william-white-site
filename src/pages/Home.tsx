@@ -13,6 +13,11 @@ const codingProjects = [
     note: "EDA with Python (pandas, matplotlib, numpy)",
   },
   {
+    title: "Game Sales vs Steam Engagement - Udacity/Nanodegree",
+    href: "./projects/Data_Wrangling_Project.html",
+    note: "EDA with Python (pandas, matplotlib, numpy, databases)",
+  },
+  {
     title: "Book Popularity vs Ratings Review - Personal Project",
     href: "./projects/Book_Library_Reviews.html",
     note: "EDA with Python (pandas, matplotlib, numpy)",
