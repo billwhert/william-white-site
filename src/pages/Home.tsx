@@ -28,6 +28,12 @@ const codingProjects = [
     note: "ETL with R statistical programming",
   },
   {
+    title:
+      "Finding Donors Supervised Machine Learning Analysis - Udacity/Nanodegree",
+    href: "./projects/Finding_Donors.html",
+    note: "EDA with Python and Machine Learning (pandas, scikit-learn, logistic regression)",
+  },
+  {
     title: "Book Popularity vs Ratings Review - Personal Project",
     href: "./projects/Book_Library_Reviews.html",
     note: "EDA with Python (pandas, matplotlib, numpy)",
