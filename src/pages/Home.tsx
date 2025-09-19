@@ -34,6 +34,12 @@ const codingProjects = [
     note: "EDA with Python and Machine Learning (pandas, scikit-learn, logistic regression)",
   },
   {
+    title:
+      "Identifying Customer Segments with Unsupervised Machine Learning – Udacity Nanodegree Project",
+    href: "./projects/Identify_Customer_Segments.html",
+    note: "EDA with Python and Machine Learning (pandas, scikit-learn, matplotlib, dimensionality reduction with PCA, k-means clustering)",
+  },
+  {
     title: "Book Popularity vs Ratings Review - Personal Project",
     href: "./projects/Book_Library_Reviews.html",
     note: "EDA with Python (pandas, matplotlib, numpy)",
