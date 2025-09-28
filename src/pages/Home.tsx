@@ -18,13 +18,8 @@ const codingProjects = [
     note: "EDA with Python (pandas, matplotlib, numpy, databases)",
   },
   {
-    title: "Song Search ETL Logging - Udacity/Nanodegree",
-    href: "./projects/Song_Search.html",
-    note: "ETL with Python (PostgreSQL, pandas, databases)",
-  },
-  {
     title: "Bikeshare Ride Analysis - Udacity/Nanodegree",
-    href: "./projects/Bikeshares.html",
+    href: "./projects/Bikeshare.html",
     note: "ETL with R statistical programming",
   },
   {
