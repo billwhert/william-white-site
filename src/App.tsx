@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Experience from "./pages/Experience";
-import PowerBI from "./pages/PowerBI";
 
 export default function App() {
   // More robust check for the active page
@@ -42,17 +41,6 @@ export default function App() {
             >
               Experience
             </a>
-            {/* 👇 2. Add the new link to your navigation bar */}
-            <a
-              href="#/powerbi"
-              className={
-                activeHash === "#/powerbi"
-                  ? "text-slate-900"
-                  : "hover:text-slate-900"
-              }
-            >
-              Power BI Project
-            </a>
           </nav>
         </div>
       </header>
@@ -60,8 +48,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
-        {/* 👇 3. Add the new Route for your component */}
-        <Route path="/powerbi" element={<PowerBI />} />
         {/* fallback */}
         <Route path="*" element={<Home />} />
       </Routes>

@@ -3,6 +3,11 @@ import { LinkCard, SectionTitle } from "../components/Cards";
 
 const codingProjects = [
   {
+    title: "Customer Return Rate Dashboard - Power BI",
+    href: "https://app.powerbi.com/groups/me/reports/ef2e0209-bcc1-4424-b2be-c9a402a137fc/271e87be21e8fb8cbbb9?experience=power-bi",
+    note: "Customer Analysis, Power BI",
+  },
+  {
     title: "Using Supervised Learning to Detect Bot Accounts",
     href: "./projects/Capstone.html",
     note: "Supervised Machine Learning (Logistic Regression, Naive Bayes, Gradient Boosting), Python, EDA, Feature Engineering",
