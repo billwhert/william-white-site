@@ -83,9 +83,11 @@ export default function Home() {
             William White
           </h1>
           <p className="mt-3 text-lg text-slate-700 max-w-2xl">
-            Data & Privacy professional with 16 years at the IRS. I turn policy
-            and operational pain points into measurable wins using Python, SQL,
-            and pragmatic process design.
+            I bring 16+ years of deep federal government experience to provide
+            high-impact data solutions. I am proficient in Python, SQL, Power
+            BI, Excel, and Tableau. I excel at transforming complex operational
+            data into strategic assets, automating critical workflows, and
+            driving executive-level decisions.
           </p>
         </div>
       </div>
@@ -103,11 +105,10 @@ export default function Home() {
             guide national operations.
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
-            Currently pursuing my B.S. in Data Analytics at WGU (on track to
-            complete in just 3-4 months!), I bring real-world experience in
-            Python, SQL, Power BI, and AWS cloud services. My superpower? Taking
-            messy processes and turning them into streamlined, data-driven
-            systems that actually work.
+            I have completed my B.S. in Data Analytics at WGU (in 4 months!), I
+            bring real-world experience in Python, SQL, Excel, and Power BI
+            services. I love taking messy processes and turning them into
+            streamlined, data-driven systems that actually work.
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
             <span className="font-semibold text-slate-900">
