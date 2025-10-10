@@ -3,6 +3,11 @@ import { LinkCard, SectionTitle } from "../components/Cards";
 
 const codingProjects = [
   {
+    title: "Using Supervised Learning to Detect Bot Accounts",
+    href: "./projects/Capstone.html",
+    note: "Supervised Machine Learning (Logistic Regression, Naive Bayes, Gradient Boosting), Python, EDA, Feature Engineering",
+  },
+  {
     title: "Investigate a Dataset — Udacity/Nanodegree",
     href: "./projects/Investigate_a_Dataset.html",
     note: "EDA with Python (pandas, matplotlib)",
