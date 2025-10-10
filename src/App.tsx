@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Experience from "./pages/Experience";
+import PowerBI from "./pages/PowerBI";
 
 export default function App() {
   // Simple check: are we on home?
