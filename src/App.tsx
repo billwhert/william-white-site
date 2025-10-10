@@ -61,7 +61,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
         {/* 👇 3. Add the new Route for your component */}
-        <Route path="/powerbi" element={<PowerBi />} />
+        <Route path="/powerbi" element={<PowerBI />} />
         {/* fallback */}
         <Route path="*" element={<Home />} />
       </Routes>
