@@ -1,17 +1,18 @@
 import React from "react";
 import { LinkCard, SectionTitle } from "../components/Cards";
 
-const codingProjects = [
-  {
-    title: "Customer Return Rate Dashboard - Power BI",
-    href: "https://app.powerbi.com/groups/me/reports/ef2e0209-bcc1-4424-b2be-c9a402a137fc/271e87be21e8fb8cbbb9?experience=power-bi",
-    note: "Customer Analysis, Power BI",
-  },
-  {
-    title: "Using Supervised Learning to Detect Bot Accounts",
-    href: "./projects/Capstone.html",
-    note: "Supervised Machine Learning (Logistic Regression, Naive Bayes, Gradient Boosting), Python, EDA, Feature Engineering",
-  },
+interface Project {
+  title: string;
+  href: string;
+  note: string;
+  github?: string;
+}
+
+const sqlProjects: Project[] = [
+  // Add SQL projects here as you complete them
+];
+
+const pythonProjects = [
   {
     title: "Investigate a Dataset — Udacity/Nanodegree",
     href: "./projects/Investigate_a_Dataset.html",
@@ -28,9 +29,44 @@ const codingProjects = [
     note: "EDA with Python (pandas, matplotlib, numpy, databases)",
   },
   {
+    title: "Book Popularity vs Ratings Review - Personal Project",
+    href: "./projects/Book_Library_Reviews.html",
+    note: "EDA with Python (pandas, matplotlib, numpy)",
+  },
+];
+
+const rProjects = [
+  {
     title: "Bikeshare Ride Analysis - Udacity/Nanodegree",
     href: "./projects/Bikeshare.html",
     note: "ETL with R statistical programming",
+  },
+];
+
+const visualizationProjects = [
+  {
+    title: "Customer Return Rate Dashboard - Power BI",
+    href: "https://app.powerbi.com/groups/me/reports/ef2e0209-bcc1-4424-b2be-c9a402a137fc/271e87be21e8fb8cbbb9?experience=power-bi",
+    note: "Customer Analysis, Power BI",
+  },
+];
+
+const mlProjects = [
+  {
+    title: "Using Supervised Learning to Detect Bot Accounts",
+    href: "./projects/Capstone.html",
+    note: "Supervised Machine Learning (Logistic Regression, Naive Bayes, Gradient Boosting), Python, EDA, Feature Engineering",
+    github: "https://github.com/billwhert/Social-Media-Bot-Detection",
+  },
+  {
+    title: "ML Pipeline for Short-Term Rental Prices in NYC",
+    href: "https://github.com/billwhert/Project-Build-an-ML-Pipeline-Starter",
+    note: "End-to-end ML pipeline predicting Airbnb prices — MLflow, Weights & Biases, Hydra, Random Forest, scikit-learn",
+  },
+  {
+    title: "Census Income Prediction — FastAPI Deployment",
+    href: "https://github.com/billwhert/Deploying-a-Scalable-ML-Pipeline-with-FastAPI",
+    note: "Logistic regression on Census Income data, served via FastAPI with CI/CD (GitHub Actions, flake8, pytest)",
   },
   {
     title:
@@ -43,11 +79,6 @@ const codingProjects = [
       "Identifying Customer Segments with Unsupervised Machine Learning – Udacity Nanodegree Project",
     href: "./projects/Identify_Customer_Segments.html",
     note: "EDA with Python and Machine Learning (pandas, scikit-learn, matplotlib, dimensionality reduction with PCA, k-means clustering)",
-  },
-  {
-    title: "Book Popularity vs Ratings Review - Personal Project",
-    href: "./projects/Book_Library_Reviews.html",
-    note: "EDA with Python (pandas, matplotlib, numpy)",
   },
 ];
 
@@ -110,10 +141,21 @@ export default function Home() {
             guide national operations.
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
-            I have completed my B.S. in Data Analytics at WGU (in 4 months!), I
-            bring real-world experience in Python, SQL, Excel, and Power BI
-            services. I love taking messy processes and turning them into
-            streamlined, data-driven systems that actually work.
+            I completed my B.S. in Data Analytics at WGU in just 4 months. I
+            bring real-world experience in Python, SQL, Excel, and Power BI and
+            love taking messy processes and turning them into streamlined,
+            data-driven systems that actually work. I'm actively expanding my
+            project portfolio across SQL, Python, R, visualization, and machine
+            learning — you can follow along on{" "}
+            <a
+              href="https://github.com/billwhert"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 hover:underline font-medium"
+            >
+              GitHub
+            </a>
+            .
           </p>
           <p className="text-slate-700 leading-relaxed mt-3">
             <span className="font-semibold text-slate-900">
@@ -130,15 +172,86 @@ export default function Home() {
 
       <section className="mt-10">
         <SectionTitle>Projects — Coding</SectionTitle>
-        <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {codingProjects.map((p) => (
-            <LinkCard
-              key={p.title}
-              title={p.title}
-              href={p.href}
-              note={p.note}
-            />
-          ))}
+
+        <div className="mt-6 space-y-8">
+          {/* SQL */}
+          <div>
+            <h3 className="text-base font-semibold text-slate-500 uppercase tracking-widest mb-1">
+              SQL
+            </h3>
+            <p className="text-sm text-slate-500 mb-3">
+              Querying, joins, aggregations, and data manipulation across relational databases.
+            </p>
+            {sqlProjects.length > 0 ? (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {sqlProjects.map((p) => (
+                  <LinkCard key={p.title} title={p.title} href={p.href} note={p.note} github={p.github} />
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-slate-400 italic">Projects coming soon.</p>
+            )}
+          </div>
+
+          {/* Python / Pandas */}
+          <div>
+            <h3 className="text-base font-semibold text-slate-500 uppercase tracking-widest mb-1">
+              Python / Pandas
+            </h3>
+            <p className="text-sm text-slate-500 mb-3">
+              Exploratory data analysis, data wrangling, A/B testing, and statistical analysis on real-world datasets using pandas, NumPy, and matplotlib.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {pythonProjects.map((p) => (
+                <LinkCard key={p.title} title={p.title} href={p.href} note={p.note} />
+              ))}
+            </div>
+          </div>
+
+          {/* R */}
+          <div>
+            <h3 className="text-base font-semibold text-slate-500 uppercase tracking-widest mb-1">
+              R
+            </h3>
+            <p className="text-sm text-slate-500 mb-3">
+              Statistical programming and ETL workflows using R for data transformation and analysis.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {rProjects.map((p) => (
+                <LinkCard key={p.title} title={p.title} href={p.href} note={p.note} />
+              ))}
+            </div>
+          </div>
+
+          {/* Visualization */}
+          <div>
+            <h3 className="text-base font-semibold text-slate-500 uppercase tracking-widest mb-1">
+              Visualization
+            </h3>
+            <p className="text-sm text-slate-500 mb-3">
+              Business intelligence dashboards and visual storytelling using Power BI and DAX to surface insights for decision-makers.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {visualizationProjects.map((p) => (
+                <LinkCard key={p.title} title={p.title} href={p.href} note={p.note} />
+              ))}
+            </div>
+          </div>
+
+          {/* Machine Learning */}
+          <div>
+            <h3 className="text-base font-semibold text-slate-500 uppercase tracking-widest mb-1">
+              Machine Learning
+            </h3>
+            <p className="text-sm text-slate-500 mb-3">
+              Supervised and unsupervised learning projects covering classification, clustering, dimensionality reduction, and feature engineering with scikit-learn.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {mlProjects.map((p) => (
+                <LinkCard key={p.title} title={p.title} href={p.href} note={p.note} />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -163,7 +276,7 @@ export default function Home() {
             I'm actively exploring new opportunities and would love to hear from
             you!
           </p>
-          <div className="grid sm:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <a
               href="mailto:billjohnwhite@gmail.com"
               className="flex flex-col items-center justify-center bg-white rounded-lg border border-slate-200 p-4 hover:shadow-md transition-all group"
@@ -189,6 +302,18 @@ export default function Home() {
               <span className="text-xs text-slate-500">
                 Professional Profile
               </span>
+            </a>
+            <a
+              href="https://github.com/billwhert"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center bg-white rounded-lg border border-slate-200 p-4 hover:shadow-md transition-all group"
+            >
+              <span className="text-2xl mb-2">🐙</span>
+              <span className="text-sm font-medium text-slate-900 group-hover:text-sky-600">
+                GitHub
+              </span>
+              <span className="text-xs text-slate-500">Project Code</span>
             </a>
             <a
               href="https://wgu.joinhandshake.com/profiles/williamwhite"

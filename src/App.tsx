@@ -53,8 +53,32 @@ export default function App() {
       </Routes>
 
       <footer className="border-t border-slate-200 bg-white/70 mt-16">
-        <div className="mx-auto max-w-6xl px-6 py-8 text-xs text-slate-500">
-          © {new Date().getFullYear()} William White.
+        <div className="mx-auto max-w-6xl px-6 py-8 flex items-center justify-between gap-4 flex-wrap text-xs text-slate-500">
+          <span>© {new Date().getFullYear()} William White.</span>
+          <div className="flex items-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/william-white-analyst/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-600 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/billwhert"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-600 transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="mailto:billjohnwhite@gmail.com"
+              className="hover:text-sky-600 transition-colors"
+            >
+              billjohnwhite@gmail.com
+            </a>
+          </div>
         </div>
       </footer>
     </div>

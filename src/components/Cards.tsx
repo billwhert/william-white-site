@@ -5,9 +5,10 @@ interface LinkCardProps {
   href: string;
   note?: string;
   imageUrl?: string;
+  github?: string;
 }
 
-export function LinkCard({ title, href, note, imageUrl }: LinkCardProps) {
+export function LinkCard({ title, href, note, imageUrl, github }: LinkCardProps) {
   // decide which links open in a new tab: external or local static assets
   const isExternal = /^https?:\/\//i.test(href);
   const openInNewTab =
@@ -32,23 +33,38 @@ export function LinkCard({ title, href, note, imageUrl }: LinkCardProps) {
       : "assets/favicon.svg");
 
   return (
-    <a
-      href={href}
-      target={openInNewTab ? "_blank" : "_self"}
-      rel="noopener noreferrer"
-      className="group flex items-center gap-3 rounded-2xl bg-white/90 border border-slate-200 p-4 hover:shadow-lg hover:-translate-y-0.5 transition"
-    >
-      <img src={favicon} alt="" className="w-10 h-10 rounded" />
-      <div>
-        <div className="font-medium text-slate-900 group-hover:underline">
-          {title}
+    <div className="group flex flex-col rounded-2xl bg-white/90 border border-slate-200 hover:shadow-lg hover:-translate-y-0.5 transition overflow-hidden">
+      <a
+        href={href}
+        target={openInNewTab ? "_blank" : "_self"}
+        rel="noopener noreferrer"
+        className="flex items-center gap-3 p-4 flex-1"
+      >
+        <img src={favicon} alt="" className="w-10 h-10 rounded shrink-0" />
+        <div>
+          <div className="font-medium text-slate-900 group-hover:underline">
+            {title}
+          </div>
+          <div className="text-xs text-slate-500">
+            {openInNewTab ? "opens in new tab" : "opens here"}
+            {note ? " • " + note : ""}
+          </div>
         </div>
-        <div className="text-xs text-slate-500">
-          {openInNewTab ? "opens in new tab" : "opens here"}
-          {note ? " • " + note : ""}
+      </a>
+      {github && (
+        <div className="border-t border-slate-100 px-4 py-2">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-slate-400 hover:text-sky-600 transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View code on GitHub →
+          </a>
         </div>
-      </div>
-    </a>
+      )}
+    </div>
   );
 }
 
@@ -64,9 +80,16 @@ export function BadgeCard({
   note?: string;
 }) {
   const isExternal = /^https?:\/\//i.test(href);
-  const favicon = isExternal
-    ? "https://www.google.com/s2/favicons?domain=example.com&sz=64"
-    : "assets/favicon.svg";
+  let badgeDomain = "";
+  try {
+    badgeDomain = new URL(href).hostname;
+  } catch {
+    badgeDomain = "";
+  }
+  const favicon =
+    isExternal && badgeDomain
+      ? `https://www.google.com/s2/favicons?domain=${badgeDomain}&sz=64`
+      : "assets/favicon.svg";
   return (
     <a
       href={href}
