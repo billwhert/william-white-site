@@ -120,17 +120,17 @@ export default function Experience() {
         <SectionTitle>Education</SectionTitle>
         <div className="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           <div className="p-3 rounded-lg bg-white/80 border border-slate-200">
-            <div className="p-3 rounded-lg bg-white/80 border border-slate-200">
-              <div className="font-medium text-sm text-slate-900">
-                B.S., Data Analytics
-              </div>
-              <div className="text-xs text-slate-600">In Progress</div>
-              <div className="text-xs text-slate-700 mt-1">WGU | Oct 2025</div>
-              <div className="text-xs text-slate-600">
-                Accelerated (3-4 months)
-              </div>
+            <div className="font-medium text-sm text-slate-900">
+              B.S., Data Analytics
             </div>
+            <div className="text-xs text-slate-600">Completed</div>
+            <div className="text-xs text-slate-700 mt-1">WGU | Oct 2025</div>
+            <div className="text-xs text-slate-600">
+              Accelerated (3-4 months)
+            </div>
+          </div>
 
+          <div className="p-3 rounded-lg bg-white/80 border border-slate-200">
             <div className="font-medium text-sm text-slate-900">
               B.S., Political Science
             </div>
